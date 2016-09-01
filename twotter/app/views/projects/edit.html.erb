@@ -1,0 +1,45 @@
+<%= form_for(@twot, url: update_project_path(@twot)) do |f| %>
+  <% if @twot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@twot.errors.count, "error") %> prohibited this twot from being saved:</h2>
+
+      <ul>
+      <% @twot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <br>
+
+  <%= f.label :active %>
+  <%= f.check_box :active %>
+
+  <br>
+
+  <%= f.label :twot_number %>
+  <%= f.text_field :twot_number %>
+
+  <br>
+
+  <%= f.label :link %>
+  <%= f.text_field :link %>
+
+  <br>
+
+  <%= f.label :user %>
+  <%= f.select :user_id, User.all.collect{|u| [u.name, u.id ]} %>
+
+  <%= f.submit %>
+<% end %>

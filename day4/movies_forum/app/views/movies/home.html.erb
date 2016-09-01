@@ -1,0 +1,13 @@
+
+<%= form_for(@movie,url: movies_search_path ) do |f| %>
+
+
+  <p>Search movie:
+    <%= f.text_field :title %>
+    <%= button_tag(type: 'button') do %>
+      <%= content_tag(:strong, 'Search!')%>
+    <% end %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

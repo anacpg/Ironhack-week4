@@ -1,0 +1,15 @@
+
+
+<%= @user.name %>
+
+<ul>
+  <% @products.each do |product| %>
+    
+    <li>  <%=  link_to product.title, products_show_path(@user , product) %>
+          <%= link_to 'Destroy', products_destroy_path(@user, product)%>
+    </li>
+
+  <% end %>
+  </ul>
+
+<%= link_to 'New Product', products_new_path %>

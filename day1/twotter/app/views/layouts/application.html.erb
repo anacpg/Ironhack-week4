@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <%= "Notice: " + flash[:notice].inspect%>
     <%= yield %>
+    <div id="menu">
+      <%= link_to "New twot", projects_nzew_path%>
+    </div>
   </body>
 </html>

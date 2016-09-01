@@ -1,0 +1,9 @@
+<%= form_tag(search_projects_path) do |f| %>
+  <%= text_field_tag :query %>
+<% end %>
+
+<ul>
+  <% @twots.each do |t| %>
+    <li><%= link_to t.body, twot_show_path(t) %></li>
+  <% end %>
+</ul>

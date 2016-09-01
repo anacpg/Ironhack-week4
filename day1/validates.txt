@@ -1,0 +1,10 @@
+validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/ }
+
+[12:59]
+validates :email, format: { with: /^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/i } (edited)
+
+[1:02]
+lo bueno
+
+[1:02]
+validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "cannot contain white spaces"}

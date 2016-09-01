@@ -1,0 +1,12 @@
+
+<p> Product: <%= @product.title%></p>
+<p> Description <%= @product.description  %></p>
+<p> Deadline <%= @product.deadline  %></p>
+<% if @product.user_id != nil %>
+  <p> User: <%= link_to @user.name , users_show_path(@user) %> </p>
+<% end %>
+
+
+
+
+<%= link_to 'Back', products_path %>
